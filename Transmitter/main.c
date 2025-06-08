@@ -121,13 +121,10 @@ int main(void)
 				uint8_t STAT = readRegisterDataNrf24l01(NRF24L01_STATUS);
 	
 					if(BUTTON_PRESSED) // button pressed
-					{
-	
+					{	
 						transmitDataNrf24l01(LED_ACTIVATE);
-						delay_ms(5);
 						flushTxFifo();
 					}
-	
 					if(CHECK_ACK_BIT) // ACK packet has been received
 						CLEAR_TX_DS();
 	
