@@ -67,7 +67,7 @@ typedef enum {
 void write_register_nrf24l01(unsigned int8 register_address, unsigned int8 data );                                        
 unsigned int8 read_register_nrf24l01(unsigned int8 register_address );     
 void define_address_tx_nrf24l01(unsigned int8* address);  
-
+void nrf24l01_init(void);
 
 
 #endif /* NRF24L01_H_ */                                    
