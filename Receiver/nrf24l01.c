@@ -169,6 +169,29 @@ void rx_flush_fifo(void)
                       
      CSN_HIGH();            
 }
+void nrf24l01_init(void)
+{
+   write_register_nrf24l01(NRF24L01_CONFIG, 0x0B);  // set for RX mode                                                                      
+                            
+    write_register_nrf24l01(NRF24L01_EN_AA, 0x01); // open  auto ack for only pipe0     
+                                                                                                                                            
+    write_register_nrf24l01(NRF24L01_EN_RXADDR, 0x01);  // enable data pipe0                                                                                                                           
+                                                                                                          
+    write_register_nrf24l01(NRF24L01_RF_CH, 0x64); // set 2.5 GHz frequency band    
+                                                                                                                                                                                                  
+    write_register_nrf24l01(NRF24L01_RF_SETUP, 0x06); //   set 0 dBm, 1mbps     
+                                                                                                                                                                                                                       
+    write_register_nrf24l01(NRF24L01_SETUP_AW, 0x03); //    set address width to 5 byte        
+                                                                                                                                                                                                                                                              
+      unsigned int8 address[5] = {0xE1, 0x42, 0x93, 0xB8, 0x15};    
+                                                                                                                                                           
+     define_address_tx_nrf24l01(address);      // set TX address                     
+      
+     define_address_rx_nrf24l01(address);      // set RX address     
+                                                                                                                  
+     write_register_nrf24l01(NRF24L01_RX_PW_P0, 0x01); // set payload to 1 byte in pipe0 
+ 
+}
   /*      
 unsigned int8 read_register_nrf24l01(unsigned int8 register_address)
 {
