@@ -90,7 +90,7 @@ void main() {
                             SETUP_AW  5byte      set  TX and RX with the same parameters                         
                                                         
                            RX_ADDR_P0 = same 5-byte address
-                           RX_PW_P0 = size of expected payload (1–32)
+                           RX_PW_P0 = size of expected payload (1â€“32)
                                                         
                                               
   */                
@@ -118,12 +118,12 @@ void main() {
        }                                            
 /*         The MSSPx module has five registers for SPI mode
           operation. These are:
-         • MSSPx STATUS register (SSPxSTAT)      ---
-         • MSSPx Control register 1 (SSPxCON1)   ---
-         • MSSPx Control register 3 (SSPxCON3)   
-         • MSSPx Data Buffer register (SSPxBUF)   
-         • MSSPx Address register (SSPxADD)
-         • MSSPx Shift register (SSPxSR) 
+         â€¢ MSSPx STATUS register (SSPxSTAT)      ---
+         â€¢ MSSPx Control register 1 (SSPxCON1)   ---
+         â€¢ MSSPx Control register 3 (SSPxCON3)   
+         â€¢ MSSPx Data Buffer register (SSPxBUF)   
+         â€¢ MSSPx Address register (SSPxADD)
+         â€¢ MSSPx Shift register (SSPxSR) 
          (Not directly accessible)                     
 
 
