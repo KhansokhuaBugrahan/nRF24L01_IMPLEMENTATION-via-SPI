@@ -1,2 +1,17 @@
 # nRF24L01__IMPLEMENTATION-via-SPI-
 In this application, we control a single LED  remotely using nRF24L01 module.
+
+
+Transmitter side MCU STM32F407G-DISC   ----------->                            STMCubeIDE                                                                    
+Receiver side MCU PIC18F46K22     ---->                                CCS C Compiler - MPLABIDE               
+
+I have tested the module in severals rooms of my flat without using antenna in both receiver and transmitter.                                     
+You can have more than 100 meter range with different setups by mounting antenna.
+
+I especially chose the PIC18F46K22 due to its power supply matchig  with nRF module. (3.3V)   
+Therefore, we did not need to use a logic translator.                             
+I powered transmitter's module using Vdd pin.
+
+Since PIC18F46K22 has an internal oscillator. I did not use any external crystal.
+
+In the video below, I powered STM using a USB cable, and PIC18F46K22 was powered by an external adjustable(to 3.3V) adapter.
