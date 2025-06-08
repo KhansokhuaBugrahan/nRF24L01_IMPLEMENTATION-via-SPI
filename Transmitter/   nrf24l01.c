@@ -207,6 +207,31 @@ void flushTxFifo()
 		NRF24L01_CE_LOW();
 		SPI1_PERIPHERAL_DISABLE();
 }
+void nrf24l01Init(void)
+{
+
+	writeRegisterDataNrf24l01(NRF24L01_STATUS, 0x00 );
+
+	writeRegisterDataNrf24l01(NRF24L01_CONFIG, 0x0A); 		// set for Tx mode
+
+	writeRegisterDataNrf24l01(NRF24L01_EN_AA, 0x01); 		// open  auto ack for only pipe0
+
+	writeRegisterDataNrf24l01(NRF24L01_EN_RXADDR, 0x01);
+
+	writeRegisterDataNrf24l01(NRF24L01_RF_CH, 0x64);		 // set 2.5 GHz frequency band
+
+	writeRegisterDataNrf24l01(NRF24L01_RF_SETUP, 0x06); 	//  set 0 dBm, 1mbps
+
+	writeRegisterDataNrf24l01(NRF24L01_SETUP_AW, 0x03);		 //  set address width to 5 byte
+
+	  uint8_t address[5] = {0xE1, 0x42, 0x93, 0xB8, 0x15};
+
+	 defineAddressTxNrf24l01(address);      // set TX address
+	 defineAddressRxNrf24l01(address);      // set RX address
+
+	 writeRegisterDataNrf24l01(NRF24L01_RX_PW_P0, 0x01); // set payload to 1 byte in pipe0
+
+}
 /*
  *
  * Is it possible to create another enum inside an enum ? something like nested structure
