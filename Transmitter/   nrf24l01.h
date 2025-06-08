@@ -79,4 +79,6 @@ void writeRegisterDataNrf24l01(uint8_t registerAddress, uint8_t data );
 uint8_t readRegisterDataNrf24l01(uint8_t registerAddress );
 void transmitDataNrf24l01(uint8_t payload);
 void flushTxFifo(void);
+void nrf24l01Init(void);
+
 #endif /* NRF24L01_H_ */
