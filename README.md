@@ -1,4 +1,4 @@
-# nRF24L01__IMPLEMENTATION-via-SPI-
+# nRF24L01_IMPLEMENTATION-via-SPI-
 In this application, we control a single LED  remotely using nRF24L01 module.
 
 
@@ -14,7 +14,10 @@ I powered transmitter's module using Vdd pin.
 
 Since PIC18F46K22 has an internal oscillator. I did not use any external crystal.
 
-In the video below, I powered STM using a USB cable, and PIC18F46K22 was powered by an external adjustable(to 3.3V) adapter.
+In the video below, I powered STM using a USB cable, and PIC18F46K22 was powered by an external adjustable(to 3.3V) adapter.               
+
+main.c files are last organized codes, and you can examine the debug C files
+
 
 Click the icon to redirect YouTube and watch the showcase video.                                           
 [![Custom Thumbnail](https://github.com/KhansokhuaBugrahan/ADXL345_IMPLEMENTATION-via-SPI/blob/main/gif.gif)](https://youtu.be/KmmfmDtCy3U)
