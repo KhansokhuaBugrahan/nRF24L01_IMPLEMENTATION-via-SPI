@@ -123,7 +123,6 @@ int main(void)
 
 						if(BUTTON_PRESSED) // button pressed
 						{
-
 							transmitDataNrf24l01(LED_ACTIVATE);
 							flushTxFifo();
 						}
