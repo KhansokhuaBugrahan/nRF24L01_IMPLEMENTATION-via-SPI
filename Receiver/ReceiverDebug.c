@@ -134,7 +134,7 @@ void main() {
 /*
    I can communicate while in both debuggig mode or programming mode. However, when I directly program the pic and remove the pickit3 device
    it does not communicate anymore. What is the reason for this? Above you can see the RX code for PIC18F46K22, in below transmitter code, 
-
+   The answer lies on in the 23th line.
 
 */
 
